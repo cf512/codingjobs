@@ -10,8 +10,17 @@ export default {
     return axios.post("/api/users", userData);
   },
   // Searches for jobs using the Indeed API
-  searchJobs: function(query) {
-    return axios.get("/api/jobs/search", { params: { q: query } });
+  searchJobs: function(query, location, page) {
+    const limit = 10;
+    const start = page * limit;
+    return axios.get("/api/jobs/search", {
+      params: {
+        q: query,
+        l: location,
+        start: start,
+        limit: limit
+      }
+    });
   },
   // Saves a job to the given user id
   saveJob: function(jobData, userId) {

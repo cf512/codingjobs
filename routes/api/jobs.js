@@ -6,8 +6,17 @@ const jobsController = require("../../controllers/jobsController");
 router.route("/search")
   .get((req, res) => {
     axios
-      .get("http://api.indeed.com/ads/apisearch", { params: req.query })
-      .then(({ data: { items } }) => res.json(items))
+      .get("http://api.indeed.com/ads/apisearch", {
+        params: {
+          publisher: process.env.INDEED_PUBLISHER_ID,
+          v: 2,
+          userip: "1.2.3.4",
+          useragent: "Mozilla",
+          format: "json",
+          ...req.query
+        }
+      })
+      .then(({ data: { results } }) => res.json(results))
       .catch(err => res.status(422).json(err));
   });
 
