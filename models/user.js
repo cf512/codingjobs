@@ -7,24 +7,12 @@ const userSchema = new Schema({
     required: true,
     unique: true
   },
-  savedJobs: [{
-    title: {
-      type: String,
-      required: true
-    },
-    location: {
-      type: String,
-      required: true
-    },
-    company: {
-      type: String,
-      required: true
-    },
-    description: {
-      type: String,
-      required: true
+  savedJobs: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Job"
     }
-  }]
+  ]
 });
 
 const User = mongoose.model("User", userSchema);
