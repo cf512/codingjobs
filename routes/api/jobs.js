@@ -13,6 +13,7 @@ router.route("/search")
           userip: "1.2.3.4",
           useragent: "Mozilla",
           format: "json",
+          highlight: 0,
           ...req.query
         }
       })
