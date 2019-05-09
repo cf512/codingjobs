@@ -1,0 +1,43 @@
+body{
+    background-color: #8A8B8C;
+}
+
+.container{
+    max-width: 600px;
+}
+
+.form{
+    font-family: 'Lato', sans-serif;
+    color: black;
+}
+
+.form-control-lg{
+    width: 400px;
+}
+
+.btn-lg{
+    display: inline;
+    margin-left: 10px;
+}
+
+.dropdown{
+    margin-top: 10px;
+    color: blue;
+}
+
+.card-body{
+    background-color: #8A8B8C;
+    border: none;
+}
+
+.upper{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 460px) {
+    .form-control-lg {
+      max-width: 400px
+    }
+  }
+

@@ -1,0 +1,19 @@
+body{
+    margin-bottom: 75px;
+}
+
+.navbar{
+    background-color: #A31F34!important;
+    font-family: 'Lato', sans-serif;
+    border-bottom: 1px ridge black;
+}
+
+.nav-link{
+    padding: 0;
+    display: inline;
+}
+
+#signin{
+    border-right: 1px solid black;
+}
+
