@@ -11,7 +11,7 @@ function Nav(props) {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className={props.location === "/signin" || props.location === "/search" ? "nav-item active" : "nav-item"}>
-            <a className="nav-link" id="signin" href="/signin">Sign-In</a>
+            <a className="nav-link" id="signin" href="#modalLoginForm">Sign-In</a>
           </li>
           <li className={props.location === "/saved" ? "nav-item active" : "nav-item" }>
             <a className="nav-link text-right" id="saved" href="/saved">Saved</a>

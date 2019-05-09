@@ -6,13 +6,8 @@ function Form(props) {
     <div className="container">
       <form>
           <div className="form">
-              <input type="text" className="form-control-lg" id="search" aria-describedby="emailHelp" placeholder="Enter City to Search" />
-              <button type="button" className="btn-lg btn-primary">Go Get It!</button>
+              <input type="text" className="form-control-lg" id="search-box" aria-describedby="emailHelp" placeholder="Enter City to Search" />
           </div>
-          <h5 className="dropdown accordion text-center" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            Advanced Search
-          </h5>
-        <div className="collapse" id="collapseExample">
           <div className="card card-body">
             <div className="row upper">
               <div className="col-md-6">
@@ -35,7 +30,7 @@ function Form(props) {
             <div className="row lower">
               <div className="col-md-6">
                 <select className="mdb-select md-form" multiple>
-                    <option value="" disabled selected>Choose Primary Skill</option>
+                    <option value="" disabled selected>Choose Primary Skills</option>
                     <option value="1">Java</option>
                     <option value="2">Javascript</option>
                     <option value="3">PHP</option>
@@ -47,20 +42,22 @@ function Form(props) {
               <div className="col-md-6">
                 <select className="mdb-select md-form" multiple>
                     <option value="" disabled selected>Choose Secondary Skills</option>
-                    <option value="1">USA</option>
-                    <option value="2">Germany</option>
-                    <option value="3">France</option>
-                    <option value="4">Poland</option>
+                    <option value="1">MySql</option>
+                    <option value="2">MongoDB</option>
+                    <option value="3">jQuery</option>
+                    <option value="4">Git</option>
                     <option value="5">Japan</option>
                   </select>
                   <button className="btn-save btn btn-primary btn-sm">Save</button>
               </div>
             </div>
+            <button type="button" className="btn-lg btn-primary">Go Get It!</button>
           </div>
-        </div>
       </form>
     </div>
   );
 }
+
+  
 
 export default Form;

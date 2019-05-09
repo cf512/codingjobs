@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import API from "../utils/API";
 import Nav from "../components/Nav"
+import Jumbotron from "../components/Jumbotron";
+import Form from "../components/Form";
+import Footer from "../components/Footer";
 
 class Search extends Component {
   state = {
@@ -10,8 +12,10 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <Nav location={this.props.location.pathname} />
-        <h1>Search</h1>
+        <Nav />
+        <Jumbotron />
+        <Form />
+        <Footer />
       </div>
     );
   }

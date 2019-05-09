@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import API from "../utils/API";
 import Nav from "../components/Nav"
+import Jumbotron from "../components/Jumbotron";
+import Card from "../components/Card";
+import Footer from "../components/Footer";
 
 class Saved extends Component {
   state = {
@@ -10,8 +12,10 @@ class Saved extends Component {
   render() {
     return (
       <div>
-        <Nav location={this.props.location.pathname} />
-        <h1>Saved</h1>
+        <Nav />
+        <Jumbotron />
+        <Card />
+        <Footer />
       </div>
     );
   }

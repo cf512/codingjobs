@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import API from "../utils/API";
 import Nav from "../components/Nav"
-import Jumbotron from "./components/Jumbotron";
-import Form from "./components/Form";
-import Footer from "./components/Footer";
+import Jumbotron from "../components/Jumbotron";
+import Card from "../components/Card";
+import Footer from "../components/Footer";
 
-class Saved extends Component {
+class Results extends Component {
   state = {
     
   }
@@ -15,18 +14,11 @@ class Saved extends Component {
       <div>
         <Nav />
         <Jumbotron />
-        <div class="card">
-          <div class="card-body">
-            <blockquote class="blockquote mb-0">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-              <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-            </blockquote>
-          </div>
-        </div>
+        <Card />
         <Footer />
       </div>
     );
   }
 }
 
-export default Saved;
+export default Results;
