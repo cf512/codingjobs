@@ -1,0 +1,12 @@
+.jumbotron {
+  background-color: #C2C0BF;
+  min-height: 300px;
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  top: -50px;
+  z-index: -1;
+}
+
+.lead{
+  padding-top: 60px;
+}

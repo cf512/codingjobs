@@ -10,11 +10,11 @@ function Nav(props) {
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
-          <li className={props.location === "/" || props.location === "/search" ? "nav-item active" : "nav-item"}>
-            <a className="nav-link" href="/">Home</a>
+          <li className={props.location === "/signin" || props.location === "/search" ? "nav-item active" : "nav-item"}>
+            <a className="nav-link" id="signin" href="#modalLoginForm">Sign-In</a>
           </li>
-          <li className={props.location === "/saved" ? "nav-item active" : "nav-item"}>
-            <a className="nav-link" href="/saved">Saved</a>
+          <li className={props.location === "/saved" ? "nav-item active" : "nav-item" }>
+            <a className="nav-link text-right" id="saved" href="/saved">Saved</a>
           </li>
         </ul>
       </div>

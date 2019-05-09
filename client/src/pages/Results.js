@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Nav from "../components/Nav"
 import Jumbotron from "../components/Jumbotron";
-import Form from "../components/Form";
+import Card from "../components/Card";
 import Footer from "../components/Footer";
 
-class Search extends Component {
+class Results extends Component {
   state = {
     
   }
@@ -14,11 +14,11 @@ class Search extends Component {
       <div>
         <Nav />
         <Jumbotron />
-        <Form />
+        <Card />
         <Footer />
       </div>
     );
   }
 }
 
-export default Search;
+export default Results;
