@@ -31,7 +31,10 @@
     "dotenv": "^8.0.0",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
+    "mdbreact": "./mdbreact-4.13.0.tgz",
     "mongojs": "^2.6.0",
-    "mongoose": "^5.5.5"
+    "mongoose": "^5.5.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
