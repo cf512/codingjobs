@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import Nav from "../components/Nav"
 import Jumbotron from "../components/Jumbotron";
+import PlacesAutocomplete from "../components/PlacesAutocomplete"
 import Form from "../components/Form";
 import {CardList, Card } from "../components/Card";
 import Footer from "../components/Footer";
@@ -16,11 +17,13 @@ class Home extends Component {
     secondarySkills: []
   }
 
+  // Generic handler for input change
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
   };
 
+  // Handles the submit for the job search form
   handleFormSubmit = event => {
     event.preventDefault();
     console.log(this.state);
@@ -31,18 +34,35 @@ class Home extends Component {
       .catch(err => console.log(err));
   }
 
+  // Save a job to the database
   saveJob = jobData => {
     API.saveJob(jobData)
       .catch(err => console.log(err));
   }
 
+  // Get the value of the primary skill select
   getValueOfSelectPrimary = value => {
     this.setState({ primarySkills: value });
   };
 
+  // Get the value of the secondary skills select
   getValueOfSelectSecondary = value => {
     this.setState({ secondarySkills: value });
   };
+
+  renderFunc = ({ getInputProps, getSuggestionItemProps, suggestions, loading }) => (
+    <div className="autocomplete-root">
+      <input {...getInputProps()} />
+      <div className="autocomplete-dropdown-container">
+        {loading && <div>Loading...</div>}
+        {suggestions.map(suggestion => (
+          <div {...getSuggestionItemProps(suggestion)}>
+            <span>{suggestion.description}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 
   render() {
     return (
@@ -51,6 +71,10 @@ class Home extends Component {
           location={this.props.location.pathname}
         />
         <Jumbotron />
+        <PlacesAutocomplete
+          value={this.state.location}
+          onChange={location => this.setState({ location })}
+        />
         <Form
           locationName="location"
           locationValue={this.state.location}
