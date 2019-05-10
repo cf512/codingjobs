@@ -4,4 +4,3 @@ client/node_modules
 .DS_Store
 package-lock.json
 client/package-lock.json
-mdbreact-4.13.0.tgz
