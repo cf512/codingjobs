@@ -4,7 +4,7 @@ import Jumbotron from "../components/Jumbotron";
 import Form from "../components/Form";
 import Footer from "../components/Footer";
 
-class Search extends Component {
+class Home extends Component {
   state = {
     
   }
@@ -21,4 +21,4 @@ class Search extends Component {
   }
 }
 
-export default Search;
+export default Home;

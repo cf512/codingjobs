@@ -5,7 +5,7 @@ function Jumbotron() {
   return (
     <div className="jumbotron jumbotron-fluid text-center">
       <div className="container">
-        <p className="lead">Search for Your Software or Web Devlopment Jobs Here Without Having to See All the Jobs You Are Not Interested In.</p>
+        <p className="lead"><span>Search for Software and Web Development Jobs</span><br /><span>(with Higher Relevance and Less Noise)</span></p>
       </div>
     </div>
   );
