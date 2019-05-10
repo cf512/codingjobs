@@ -2,6 +2,10 @@ body{
     margin-bottom: 75px;
 }
 
+.navbar-light .navbar-brand {
+    color:white;
+}
+
 .navbar{
     background-color: #A31F34!important;
     font-family: 'Lato', sans-serif;
@@ -13,7 +17,16 @@ body{
     display: inline;
 }
 
-#signin{
+#login {
     border-right: 1px solid black;
+    color:white;
 }
 
+#saved {
+    color:white;
+}
+
+#search-box {
+    text-align: center;
+    color: darkgrey;
+}
