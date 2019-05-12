@@ -10,13 +10,14 @@ export default {
     return axios.post("/api/users", userData);
   },
   // Searches for jobs using the Indeed API
-  searchJobs: function(query, location, page) {
+  searchJobs: function(query, location, jobType, page) {
     const limit = 10;
     const start = page * limit;
     return axios.get("/api/jobs/search", {
       params: {
         q: query,
         l: location,
+        jt: jobType,
         start: start,
         limit: limit
       }

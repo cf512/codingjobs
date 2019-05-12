@@ -34,6 +34,8 @@ class Home extends Component {
 
     if(this.state.primarySkills.length > 0) {
       query += "title:" + this.state.primarySkills[0];
+    } else {
+      optional.push("software developer");
     }
 
     if(this.state.position !== "none") {
@@ -44,7 +46,7 @@ class Home extends Component {
       query += " (" + optional.join(" or ") + ")";
     }
     
-    API.searchJobs(query, this.state.location, 0)
+    API.searchJobs(query, this.state.location, this.state.jobType, 0)
       .then(res => this.setState({ jobs: res.data }))
       .catch(err => console.log(err));
   };
