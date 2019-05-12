@@ -3,7 +3,7 @@ body{
 }
 
 .container{
-    max-width: 600px;
+    max-width: 750px;
 }
 
 .form{
@@ -12,12 +12,17 @@ body{
 }
 
 .form-control-lg{
-    width: 570px;
+    width: 100%;
 }
 
 .btn-lg{
     display: inline;
     margin-left: 10px;
+}
+
+.btn-group{
+    display: inline-block;
+    margin-bottom: 15px;
 }
 
 .dropdown{
@@ -34,10 +39,3 @@ body{
     text-align: center;
     margin-bottom: 20px;
 }
-
-@media only screen and (max-width: 460px) {
-    .form-control-lg {
-      max-width: 400px
-    }
-  }
-

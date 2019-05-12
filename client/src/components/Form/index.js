@@ -123,34 +123,42 @@ function Form(props) {
             <div className="col-md-6">
               <h5>Position Level</h5>
               <div className="btn-group" data-toggle="buttons">
-                <label className={props.positionValue==="Junior" ? "btn btn-blue-grey btn-sm form-check-label active" : "btn btn-blue-grey btn-sm form-check-label"}>
-                  <input className="form-check-input" type="radio" name={props.positionName} value="Junior" onClick={props.onChange} autoComplete="off" />
+                <label className={props.positionValue==="none" ? "btn btn-blue-grey btn-sm form-check-label active" : "btn btn-blue-grey btn-sm form-check-label"}>
+                  <input className="form-check-input" type="radio" name={props.positionName} value="none" onClick={props.onChange} autoComplete="off" />
+                  None
+                </label>
+                <label className={props.positionValue==="junior" ? "btn btn-blue-grey btn-sm form-check-label active" : "btn btn-blue-grey btn-sm form-check-label"}>
+                  <input className="form-check-input" type="radio" name={props.positionName} value="junior" onClick={props.onChange} autoComplete="off" />
                   Junior
                 </label>
-                <label className={props.positionValue==="Senior" ? "btn btn-blue-grey btn-sm form-check-label active" : "btn btn-blue-grey btn-sm form-check-label"}>
-                  <input className="form-check-input" type="radio" name={props.positionName} value="Senior" onClick={props.onChange} autoComplete="off" />
+                <label className={props.positionValue==="senior" ? "btn btn-blue-grey btn-sm form-check-label active" : "btn btn-blue-grey btn-sm form-check-label"}>
+                  <input className="form-check-input" type="radio" name={props.positionName} value="senior" onClick={props.onChange} autoComplete="off" />
                   Senior
-                </label>
-                <label className={props.positionValue==="None" ? "btn btn-blue-grey btn-sm form-check-label active" : "btn btn-blue-grey btn-sm form-check-label"}>
-                  <input className="form-check-input" type="radio" name={props.positionName} value="None" onClick={props.onChange} autoComplete="off" />
-                  None
                 </label>
               </div>
             </div>
             <div className="col-md-6">
-              <h5>Remote Position</h5>
+              <h5>Job Type</h5>
               <div className="btn-group" data-toggle="buttons">
-                <label className={props.remoteValue==="Yes" ? "btn btn-blue-grey btn-sm form-check-label active" : "btn btn-blue-grey btn-sm form-check-label"}>
-                  <input className="form-check-input" type="radio" name={props.remoteName} value="Yes" onClick={props.onChange} autoComplete="off" />
-                  Yes
+                <label className={props.jobTypeValue==="fulltime" ? "btn btn-blue-grey btn-sm form-check-label active" : "btn btn-blue-grey btn-sm form-check-label"}>
+                  <input className="form-check-input" type="radio" name={props.jobTypeName} value="fulltime" onClick={props.onChange} autoComplete="off" />
+                  Full Time
                 </label>
-                <label className={props.remoteValue==="No" ? "btn btn-blue-grey btn-sm form-check-label active" : "btn btn-blue-grey btn-sm form-check-label"}>
-                  <input className="form-check-input" type="radio" name={props.remoteName} value="No" onClick={props.onChange} autoComplete="off" />
-                  No
+                <label className={props.jobTypeValue==="parttime" ? "btn btn-blue-grey btn-sm form-check-label active" : "btn btn-blue-grey btn-sm form-check-label"}>
+                  <input className="form-check-input" type="radio" name={props.jobTypeName} value="parttime" onClick={props.onChange} autoComplete="off" />
+                  Part Time
                 </label>
-                <label className={props.remoteValue==="Either" ? "btn btn-blue-grey btn-sm form-check-label active" : "btn btn-blue-grey btn-sm form-check-label"}>
-                  <input className="form-check-input" type="radio" name={props.remoteName} value="Either" onClick={props.onChange} autoComplete="off" />
-                  Either
+                <label className={props.jobTypeValue==="contract" ? "btn btn-blue-grey btn-sm form-check-label active" : "btn btn-blue-grey btn-sm form-check-label"}>
+                  <input className="form-check-input" type="radio" name={props.jobTypeName} value="contract" onClick={props.onChange} autoComplete="off" />
+                  Contract
+                </label>
+                <label className={props.jobTypeValue==="internship" ? "btn btn-blue-grey btn-sm form-check-label active" : "btn btn-blue-grey btn-sm form-check-label"}>
+                  <input className="form-check-input" type="radio" name={props.jobTypeName} value="internship" onClick={props.onChange} autoComplete="off" />
+                  Internship
+                </label>
+                <label className={props.jobTypeValue==="temporary" ? "btn btn-blue-grey btn-sm form-check-label active" : "btn btn-blue-grey btn-sm form-check-label"}>
+                  <input className="form-check-input" type="radio" name={props.jobTypeName} value="temporary" onClick={props.onChange} autoComplete="off" />
+                  Temporary
                 </label>
               </div>
             </div>

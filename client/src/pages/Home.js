@@ -10,8 +10,8 @@ class Home extends Component {
   state = {
     jobs: [],
     location: "",
-    position: "None",
-    remote: "Either",
+    position: "none",
+    jobType: "fulltime",
     primarySkills: [],
     secondarySkills: []
   }
@@ -27,7 +27,23 @@ class Home extends Component {
     event.preventDefault();
     console.log(this.state);
 
-    const query = "software developer"
+    let query = "";
+    let optional = this.state.secondarySkills.slice();
+    console.log(optional);
+    console.log(this.state.secondarySkills);
+
+    if(this.state.primarySkills.length > 0) {
+      query += "title:" + this.state.primarySkills[0];
+    }
+
+    if(this.state.position !== "none") {
+      optional.push(this.state.position);
+    }
+
+    if(optional.length > 0) {
+      query += " (" + optional.join(" or ") + ")";
+    }
+    
     API.searchJobs(query, this.state.location, 0)
       .then(res => this.setState({ jobs: res.data }))
       .catch(err => console.log(err));
@@ -66,8 +82,8 @@ class Home extends Component {
           getValueOfSelectSecondary={this.getValueOfSelectSecondary}
           positionName="position"
           positionValue={this.state.position}
-          remoteName="remote"
-          remoteValue={this.state.remote}
+          jobTypeName="jobType"
+          jobTypeValue={this.state.jobType}
           onChange={this.handleInputChange}
           submit={this.handleFormSubmit}
         />
