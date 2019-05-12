@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import Nav from "../components/Nav"
 import Jumbotron from "../components/Jumbotron";
-import PlacesAutocomplete from "../components/PlacesAutocomplete"
 import Form from "../components/Form";
 import {CardList, Card } from "../components/Card";
 import Footer from "../components/Footer";
@@ -32,13 +31,13 @@ class Home extends Component {
     API.searchJobs(query, this.state.location, 0)
       .then(res => this.setState({ jobs: res.data }))
       .catch(err => console.log(err));
-  }
+  };
 
   // Save a job to the database
   saveJob = jobData => {
     API.saveJob(jobData)
       .catch(err => console.log(err));
-  }
+  };
 
   // Get the value of the primary skill select
   getValueOfSelectPrimary = value => {
@@ -50,19 +49,9 @@ class Home extends Component {
     this.setState({ secondarySkills: value });
   };
 
-  renderFunc = ({ getInputProps, getSuggestionItemProps, suggestions, loading }) => (
-    <div className="autocomplete-root">
-      <input {...getInputProps()} />
-      <div className="autocomplete-dropdown-container">
-        {loading && <div>Loading...</div>}
-        {suggestions.map(suggestion => (
-          <div {...getSuggestionItemProps(suggestion)}>
-            <span>{suggestion.description}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+  getValueOfLocation = value => {
+    this.setState({ location: value.formatted_address });
+  };
 
   render() {
     return (
@@ -71,13 +60,8 @@ class Home extends Component {
           location={this.props.location.pathname}
         />
         <Jumbotron />
-        <PlacesAutocomplete
-          value={this.state.location}
-          onChange={location => this.setState({ location })}
-        />
         <Form
-          locationName="location"
-          locationValue={this.state.location}
+          getValueOfLocation={this.getValueOfLocation}
           getValueOfSelectPrimary={this.getValueOfSelectPrimary}
           getValueOfSelectSecondary={this.getValueOfSelectSecondary}
           positionName="position"

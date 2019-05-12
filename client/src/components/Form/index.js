@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import { MDBSelect, MDBSelectInput, MDBSelectOptions, MDBSelectOption } from "mdbreact";
+import PlacesAutocomplete from "../PlacesAutocomplete"
 import "./style.css";
 
 function Form(props) {
@@ -7,14 +8,12 @@ function Form(props) {
     <div className="container">
       <form>
         <div className="form">
-          <input
+          <PlacesAutocomplete
             type="text"
             className="form-control-lg"
             id="search-box"
-            placeholder="Enter City to Search"
-            name="location"
-            value={props.locationValue}
-            onChange={props.onChange}
+            placeholder="Enter city to search"
+            onPlaceChanged={props.getValueOfLocation}
           />
         </div>
         <div className="card card-body">
