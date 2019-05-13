@@ -24,13 +24,20 @@ class PlacesAutocomplete extends React.Component {
 
   render() {
     return (
-      <input
-        ref={this.autocompleteInput}
-        id={this.props.id}
-        type={this.props.type}
-        className={this.props.className}
-        placeholder={this.props.placeholder}
-      />
+      <div className="input-group">
+        <div className="input-group-prepend">
+          <span className="input-group-text" id="basic-addon">
+            <i className="fa fa-map-marker-alt prefix"></i>
+          </span>
+        </div>
+        <input
+          ref={this.autocompleteInput}
+          id={this.props.id}
+          type={this.props.type}
+          className={this.props.className}
+          placeholder={this.props.placeholder}
+        />
+      </div>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBSelect, MDBSelectInput, MDBSelectOptions, MDBSelectOption } from "mdbreact";
+import { MDBSelect, MDBSelectInput, MDBSelectOptions, MDBSelectOption, MDBBtn, MDBIcon } from "mdbreact";
 import PlacesAutocomplete from "../PlacesAutocomplete"
 import "./style.css";
 
@@ -10,7 +10,7 @@ function Form(props) {
         <div className="form">
           <PlacesAutocomplete
             type="text"
-            className="form-control-lg"
+            className="form-control form-control-lg"
             id="search-box"
             placeholder="Enter city to search"
             onPlaceChanged={props.getValueOfLocation}
@@ -164,7 +164,9 @@ function Form(props) {
             </div>
           </div>
           <hr />
-          <button type="submit" className="btn-lg btn-primary" onClick={props.submit}>Go Get It!</button>
+          <MDBBtn type="submit" className="btn-lg btn-primary" color="primary" onClick={props.submit}>
+            <MDBIcon icon="search" /> Go Get It!
+          </MDBBtn>
         </div>
       </form>
     </div>

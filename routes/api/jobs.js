@@ -17,7 +17,7 @@ router.route("/search")
           ...req.query
         }
       })
-      .then(({ data: { results } }) => res.json(results))
+      .then(({ data }) => res.json(data))
       .catch(err => res.status(422).json(err));
   });
 
