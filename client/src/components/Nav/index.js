@@ -1,26 +1,49 @@
-import React from "react";
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu,  MDBDropdownItem, MDBContainer, MDBIcon } from "mdbreact";
+import React, {Component} from 'react';
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBCollapse, MDBContainer,
+MDBHamburgerToggler } from 'mdbreact';
 import "./style.css";
 
-function Nav(props) {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="/">Coding Jobs</a>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-          <li className={props.location === "/login" || props.location === "/search" ? "nav-item active" : "nav-item"}>
-            <a className="nav-link" id="login" href="#modalLoginForm">Login</a>
-          </li>
-          <li className={props.location === "/saved" ? "nav-item active" : "nav-item" }>
-            <a className="nav-link text-right" id="saved" href="/saved">Saved</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  );
+class NavbarPage extends Component {
+state = {
+  collapse1: false,
+  collapseID: ''
 }
 
-export default Nav;
+toggleCollapse = collapseID => () => {
+  this.setState(prevState => ({ collapseID: (prevState.collapseID !== collapseID ? collapseID : '') }));
+}
+
+toggleSingleCollapse = collapseId => {
+  this.setState({
+    ...this.state,
+    [collapseId]: !this.state[collapseId]
+  });
+}
+
+render() {
+  return (
+      <MDBNavbar className="nav-container">
+          <MDBNavbarBrand className="navbar-brand" href="/">
+            Coding Jobs
+          </MDBNavbarBrand>
+          <MDBHamburgerToggler id="hamburger1" onClick={()=> this.toggleSingleCollapse('collapse1')} />
+            <MDBCollapse isOpen={this.state.collapse1} navbar>
+              <MDBNavbarNav right>
+                <MDBNavItem active>
+                  <MDBNavLink className="nav-link" to="#modalLoginForm">Login</MDBNavLink>
+                </MDBNavItem>
+                <MDBNavItem>
+                  <MDBNavLink className="nav-link" to="/saved">Saved</MDBNavLink>
+                </MDBNavItem>
+                <MDBNavItem>
+                  <MDBNavLink className="nav-link" to="#!">Profile</MDBNavLink>
+                </MDBNavItem>
+              </MDBNavbarNav>
+            </MDBCollapse>
+      </MDBNavbar>
+    
+    );
+  }
+}
+
+export default NavbarPage;

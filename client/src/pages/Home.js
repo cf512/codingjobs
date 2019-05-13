@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import NavbarPage from "../components/Nav"
 import API from "../utils/API";
-import Nav from "../components/Nav"
 import Jumbotron from "../components/Jumbotron";
 import Form from "../components/Form";
 import {CardList, Card } from "../components/Card";
@@ -85,8 +85,8 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Nav
-          location={this.props.location.pathname}
+        <NavbarPage
+         location={this.props.location.pathname}
         />
         <Jumbotron />
         <Form
