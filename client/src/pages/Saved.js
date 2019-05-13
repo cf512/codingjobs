@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Nav from "../components/Nav"
 import Jumbotron from "../components/Jumbotron";
-import Card from "../components/Card";
+import {CardList, Card } from "../components/Card";
 import Footer from "../components/Footer";
 
 class Saved extends Component {

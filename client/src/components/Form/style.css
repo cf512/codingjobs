@@ -4,7 +4,7 @@ body{
 }
 
 .container{
-  max-width: 600px;
+  max-width: 750px;
 }
 
 .form{
@@ -13,12 +13,17 @@ body{
 }
 
 .form-control-lg{
-  width: 570px;
+  width: 100%;
 }
 
 .btn-lg{
   display: inline;
   margin-left: 10px;
+}
+
+.btn-group{
+    display: inline-block;
+    margin-bottom: 15px;
 }
 
 .dropdown{
@@ -34,6 +39,10 @@ body{
 .upper{
   text-align: center;
   margin-bottom: 20px;
+}
+
+.input-group{
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 @media only screen and (max-width: 460px) {
@@ -60,3 +69,12 @@ body{
     }
   }
 
+#search-box{
+    background-color: rgb(160, 160, 160);
+    color: black;
+    font-weight: 1000;
+}
+
+#search-box::placeholder {
+    color: rgb(82, 82, 82);
+}
