@@ -40,9 +40,35 @@ body{
     margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
 .input-group{
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
 }
+=======
+@media only screen and (max-width: 460px) {
+    .form-control-lg {
+      max-width: 380px
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .form-control-lg {
+      max-width: 345px
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    .form-control-lg {
+      max-width: 330px
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    .form-control-lg {
+      max-width: 290px
+    }
+  }
+>>>>>>> master
 
 #search-box{
     background-color: rgb(160, 160, 160);
