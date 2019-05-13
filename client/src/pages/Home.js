@@ -32,6 +32,7 @@ class Home extends Component {
   };
 
   searchJobs = () => {
+    console.log(this.state);
     let query = "";
     let optional = this.state.secondarySkills.slice();
 
@@ -56,7 +57,7 @@ class Home extends Component {
 
   // Save a job to the database
   saveJob = jobData => {
-    API.saveJob(jobData)
+    API.saveJob(jobData, /*TODO: USER ID*/)
       .catch(err => console.log(err));
   };
 
