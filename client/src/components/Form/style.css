@@ -1,38 +1,39 @@
 body{
-    background-color: #8A8B8C;
+  background-color: #8A8B8C;
+  padding-bottom: 50px;
 }
 
 .container{
-    max-width: 600px;
+  max-width: 600px;
 }
 
 .form{
-    font-family: 'Lato', sans-serif;
-    color: black;
+  font-family: 'Lato', sans-serif;
+  color: black;
 }
 
 .form-control-lg{
-    width: 570px;
+  width: 570px;
 }
 
 .btn-lg{
-    display: inline;
-    margin-left: 10px;
+  display: inline;
+  margin-left: 10px;
 }
 
 .dropdown{
-    margin-top: 10px;
-    color: blue;
+  margin-top: 10px;
+  color: blue;
 }
 
 .card-body{
-    background-color: #8A8B8C;
-    border: none;
+  background-color: #8A8B8C;
+  border: none;
 }
 
 .upper{
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 460px) {
