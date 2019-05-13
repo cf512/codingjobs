@@ -37,7 +37,25 @@ body{
 
 @media only screen and (max-width: 460px) {
     .form-control-lg {
-      max-width: 400px
+      max-width: 380px
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .form-control-lg {
+      max-width: 345px
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    .form-control-lg {
+      max-width: 330px
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    .form-control-lg {
+      max-width: 290px
     }
   }
 
