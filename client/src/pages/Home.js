@@ -101,7 +101,7 @@ class Home extends Component {
           submit={this.handleFormSubmit}
         />
         {this.state.totalResults === 0 ? (
-          <h5 class="text-center">The search criteria did not match any jobs</h5>
+          <h5 class="text-center mt-4">The search criteria did not match any jobs</h5>
         ) : (
           <CardList>
             {this.state.jobs.map(job => {
@@ -110,7 +110,7 @@ class Home extends Component {
                 company: job.company,
                 location: job.formattedLocation,
                 description: job.snippet,
-                url: job.url
+                link: job.url
               }
               return (
                 <Card
