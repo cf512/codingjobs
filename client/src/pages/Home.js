@@ -32,7 +32,6 @@ class Home extends Component {
   };
 
   searchJobs = () => {
-    console.log(this.state);
     let query = "";
     let optional = this.state.secondarySkills.slice();
 
