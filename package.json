@@ -35,6 +35,10 @@
     "mongojs": "^2.6.0",
     "mongoose": "^5.5.5",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-facebook-login": "^4.1.1",
+    "react-google-login": "^5.0.4",
+    "react-svg": "^9.0.4",
+    "react-twitter-auth": "0.0.13"
   }
 }
