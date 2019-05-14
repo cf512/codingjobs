@@ -1,7 +1,7 @@
 import React from "react";
 import { MDBBtn, MDBIcon } from "mdbreact";
 import "./style.css";
-import { PromiseProvider } from "mongoose";
+// import { PromiseProvider } from "mongoose";
 
 export function CardList(props) {
   return (

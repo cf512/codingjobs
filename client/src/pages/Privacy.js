@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Nav from "../components/Nav"
 import Jumbotron from "../components/Jumbotron";
-import {CardList as Card } from "../components/Card";
+import PrivacyInfo from "../components/PrivacyInfo";
 import Footer from "../components/Footer";
 
-class Results extends Component {
+class Privacy extends Component {
   state = {
     
   }
@@ -14,11 +14,11 @@ class Results extends Component {
       <div>
         <Nav />
         <Jumbotron />
-        <Card />
+        <PrivacyInfo />
         <Footer />
       </div>
     );
   }
 }
 
-export default Results;
+export default Privacy;
