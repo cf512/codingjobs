@@ -4,3 +4,6 @@ client/node_modules
 .DS_Store
 package-lock.json
 client/package-lock.json
+config.js
+client/src/config.json
+confs.zip
