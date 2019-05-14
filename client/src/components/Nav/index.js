@@ -38,6 +38,12 @@ render() {
                 <MDBNavItem>
                   <MDBNavLink className="nav-link" to="#!">Profile</MDBNavLink>
                 </MDBNavItem>
+                <MDBNavItem>
+                  <MDBNavLink className="nav-link" to="/resources">Resources</MDBNavLink>
+                </MDBNavItem>
+                <MDBNavItem>
+                  <MDBNavLink className="nav-link" to="/tos">Terms of Service</MDBNavLink>
+                </MDBNavItem>
               </MDBNavbarNav>
             </MDBCollapse>
       </MDBNavbar>

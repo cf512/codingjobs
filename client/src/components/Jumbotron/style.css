@@ -1,6 +1,6 @@
 .jumbotron {
   background-color: #C2C0BF;
   font-family: 'Lato', sans-serif;
+  font-weight: 900;
   position: relative;
-  z-index: -1;
 }

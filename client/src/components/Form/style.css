@@ -1,6 +1,5 @@
 body{
   background-color: #8A8B8C;
-  padding-bottom: 50px;
 }
 
 .container{
@@ -14,6 +13,10 @@ body{
 
 .form-control-lg{
   width: 100%;
+}
+
+.dropdown-content{
+  margin-bottom: 75px;
 }
 
 .btn-lg{
@@ -34,6 +37,7 @@ body{
 .card-body{
   background-color: #8A8B8C;
   border: none;
+  z-index: 1;
 }
 
 .upper{
