@@ -39,9 +39,9 @@ const Resources = props => {
                   <div className="col-md-6">
                     <h4>Javascript</h4>
                     <ul>
-                      <li><a href="https://htmlreference.io/" target="_blank">HTML Reference</a></li>
-                      <li><a href="http://htmlshell.com" target="_blank">HTML Shell</a></li>
-                      <li><a href="http://html5doctor.com" target="_blank">HTML5 Doctor</a></li>
+                      <li><a href="https://javascript.info/" target="_blank">Javascript Info</a></li>
+                      <li><a href="https://www.geeksforgeeks.org/javascript-tutorial/" target="_blank">GeeksForGeeks</a></li>
+                      <li><a href="https://www.w3schools.com/js/" target="_blank">W3Schools</a></li>
                     </ul>
                   </div>
                     <div className="col-md-6">
@@ -67,7 +67,6 @@ const Resources = props => {
                     <ul>
                       <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
                       <li><a href="http://html.net" target="_blank">HTML.net</a></li>
-                      <li><a href="https://www.siteinspire.com" target="_blank">Site Inspire</a></li>
                     </ul>
                   </div>
                 </div>
@@ -77,7 +76,6 @@ const Resources = props => {
                     <ul>
                       <li><a href="https://fontawesome.com/?from=io" target="_blank">Font Awesome</a></li>
                       <li><a href="https://fonts.google.com" target="_blank">Google Fonts</a></li>
-                      <li><a href="https://www.siteinspire.com" target="_blank">Site Inspire</a></li>
                     </ul>
                   </div>
                   <div className="col-md-6">

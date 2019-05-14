@@ -17,7 +17,7 @@ function App() {
           <Route exact path="/results" component={Results} />
           <Route exact path="/saved" component={Saved} />
           <Route exact path="/resources" component={Resources} />
-          <Route exact path="/tos" component={ToS} />
+          <Route exact path="/terms-of-service" component={ToS} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/logout" component={Logout} />
         </Switch>
