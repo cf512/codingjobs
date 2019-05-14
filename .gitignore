@@ -4,4 +4,5 @@ client/node_modules
 .DS_Store
 package-lock.json
 client/package-lock.json
-client/config.json
+config.js
+client/src/config.json
