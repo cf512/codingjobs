@@ -42,7 +42,7 @@ class LoginBtns extends Component {
             mode: 'cors',
             cache: 'default'
         };
-        fetch('http://localhost:3000/api/auth/facebook', options).then(r => {
+        fetch('/api/auth/facebook', options).then(r => {
             console.log(r);
             const token = r.headers.get('x-auth-token');
             r.json().then(user => {
@@ -62,7 +62,7 @@ class LoginBtns extends Component {
             mode: 'cors',
             cache: 'default'
         };
-        fetch('http://localhost:3000/api/auth/google', options).then(r => {
+        fetch('/api/auth/google', options).then(r => {
             console.log(process.env);
             console.log(r);
             const token = r.headers.get('x-auth-token');
