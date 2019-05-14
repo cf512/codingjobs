@@ -63,6 +63,7 @@ class LoginBtns extends Component {
             cache: 'default'
         };
         fetch('http://localhost:3000/api/auth/google', options).then(r => {
+            console.log(process.env);
             console.log(r);
             const token = r.headers.get('x-auth-token');
             r.json().then(user => {
