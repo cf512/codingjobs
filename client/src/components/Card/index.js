@@ -34,8 +34,8 @@ export function Card(props) {
                     <MDBIcon icon="bookmark" /> Save
                   </MDBBtn>
                 ) : (
-                  <MDBBtn color="danger">
-                    <MDBIcon icon="trash-alt" onClick={props.deleteOnClick} /> Delete
+                  <MDBBtn color="danger" onClick={props.deleteOnClick}>
+                    <MDBIcon icon="trash-alt" /> Delete
                   </MDBBtn>
                 )}
                 <MDBBtn href={props.jobData.link} target="_blank" color="primary" >

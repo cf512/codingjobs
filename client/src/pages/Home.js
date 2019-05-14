@@ -6,6 +6,8 @@ import Form from "../components/Form";
 import {CardList, Card } from "../components/Card";
 import Pagination from "../components/Pagination";
 import Footer from "../components/Footer";
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 
 class Home extends Component {
   state = {
@@ -16,7 +18,8 @@ class Home extends Component {
     primarySkills: [],
     secondarySkills: [],
     page: 0,
-    totalResults: -1
+    totalResults: -1,
+    user: cookies.get('user')
   }
 
   // Generic handler for input change
@@ -56,7 +59,7 @@ class Home extends Component {
 
   // Save a job to the database
   saveJob = jobData => {
-    API.saveJob(jobData, /*TODO: USER ID*/)
+    API.saveJob(jobData, this.state.user)
       .catch(err => console.log(err));
   };
 

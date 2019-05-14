@@ -24,6 +24,6 @@ router.route("/search")
 // Matches with "/api/jobs/:userId"
 router.route("/:userId")
   .post(jobsController.create)
-  .delete(jobsController.delete);
+  .put(jobsController.delete);
 
 module.exports = router;
