@@ -34,7 +34,13 @@ module.exports = function () {
         token: String
       },
       select: false
-    }
+    },
+    savedJobs: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Job"
+      }
+    ]
   });
 
   UserSchema.set("toJSON", {getters: true, virtuals: true});

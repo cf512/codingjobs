@@ -4,7 +4,7 @@ import { GoogleLogin } from 'react-google-login';
 // import FacebookLogin from 'react-facebook-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 // import GitHubLogin from 'react-github-login';
-import config from '../../config';
+import config from "../../config.json";
 import "./style.css";
 
 class LoginBtns extends Component {
@@ -39,7 +39,7 @@ class LoginBtns extends Component {
             mode: 'cors',
             cache: 'default'
         };
-        fetch('http://localhost:3000/api/v1/auth/facebook', options).then(r => {
+        fetch('http://localhost:3000/api/auth/facebook', options).then(r => {
             console.log(r);
             const token = r.headers.get('x-auth-token');
             r.json().then(user => {
@@ -58,7 +58,7 @@ class LoginBtns extends Component {
             mode: 'cors',
             cache: 'default'
         };
-        fetch('http://localhost:3000/api/v1/auth/google', options).then(r => {
+        fetch('http://localhost:3000/api/auth/google', options).then(r => {
             console.log(r);
             const token = r.headers.get('x-auth-token');
             r.json().then(user => {
@@ -114,7 +114,7 @@ class LoginBtns extends Component {
                             <GoogleLogin
                                 clientId={config.GOOGLE_CLIENTID}
                                 render={renderProps => (
-                                    <button className="btn btn-primary" onClick={renderProps.onClick} disabled={renderProps.disabled}><i class="fab fa-google"></i>  Signup / Login with Google    </button>
+                                    <button className="btn btn-primary" onClick={renderProps.onClick} disabled={renderProps.disabled}><i className="fab fa-google"></i>  Signup / Login with Google    </button>
                                 )}
                                 buttonText="Login"
                                 onSuccess={this.googleResponse}
@@ -128,7 +128,7 @@ class LoginBtns extends Component {
                                 fields="name,email,picture"
                                 callback={this.facebookResponse}
                                 render={renderProps => (
-                                    <button className="btn btn-primary" onClick={renderProps.onClick}><i class="fab fa-facebook-square"></i>  Signup / Login with Facebook</button>)} />
+                                    <button className="btn btn-primary" onClick={renderProps.onClick}><i className="fab fa-facebook-square"></i>  Signup / Login with Facebook</button>)} />
                         </div>
                         {/* <GitHubLogin
                         clientId={config.GITHUB_CLIENTID}

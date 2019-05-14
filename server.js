@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-var index = require("./routes/index");
+// var index = require("./routes/index");
 
 var corsOption = {
   origin: true,
@@ -27,8 +27,7 @@ var corsOption = {
 app.use(cors(corsOption));
 
 // Add routes, both API and view
-// app.use(routes);
-app.use("/api/v1/", index);
+app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.set("useCreateIndex", true);

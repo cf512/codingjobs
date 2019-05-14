@@ -1,9 +1,10 @@
 // "use strict";
 
 require("./mongoose")();
-var passport = require("passport");
 // var TwitterTokenStrategy = require("passport-twitter-token");
 var User = require("mongoose").model("User");
+// const db = require("./models");
+var passport = require("passport");
 var FacebookTokenStrategy = require("passport-facebook-token");
 var GoogleTokenStrategy = require("passport-google-token").Strategy;
 var config = require("./config");
