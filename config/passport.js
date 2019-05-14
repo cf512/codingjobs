@@ -18,7 +18,7 @@ let callbackURL = "";
 // if (config.use_env_variable) {
 //     callbackURL = "https://fillinthecode.herokuapp.com/auth/google/callback";
 // } else {
-callbackURL = "http://localhost:3000/auth/google/callback";
+callbackURL = "/auth/google/callback";
 // }
 
 // Set up passport strategy
