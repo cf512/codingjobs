@@ -1,24 +1,51 @@
 import React from "react";
+import { MDBBtn, MDBIcon } from "mdbreact";
 import "./style.css";
+import { PromiseProvider } from "mongoose";
 
-function Card(props) {
+export function CardList(props) {
   return (
-    <div class="card">
-        <div class="card-body">
+    <div>
+      <ul className="list-group">
+        {props.children}
+      </ul>
+    </div>
+  )
+}
+
+export function Card(props) {
+  return (
+    <div className="card">
+      <div className="card-body">
+        <div className="row">
+          <div className="col-md-4 text-center">
+            <h3>{props.jobData.title}</h3>
+            <h5>{props.jobData.company}</h5>
+            <h5>{props.jobData.location}</h5>
+          </div>
+          <div className="col-md-8">
             <div className="row">
-                <div className="col-md-4 text-center">
-                    <h3>Job Title</h3>
-                    <h5>Company Name</h5>
-                    <h5>Location</h5>
-                    <h5>Salary</h5>
-                </div>
-                <div className="col-md-8 text-center">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                </div>
+              <p>{props.jobData.description}</p>
             </div>
+            <div className="row">
+              <div className="col-md-12 d-flex justify-content-end">
+                {props.saveOnClick ? (
+                  <MDBBtn color="primary" onClick={props.saveOnClick}>
+                    <MDBIcon icon="bookmark" /> Save
+                  </MDBBtn>
+                ) : (
+                  <MDBBtn color="danger">
+                    <MDBIcon icon="trash-alt" onClick={props.deleteOnClick} /> Delete
+                  </MDBBtn>
+                )}
+                <MDBBtn href={props.jobData.link} target="_blank" color="primary" >
+                  <MDBIcon icon="external-link-alt" /> View on Indeed
+                </MDBBtn>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   );
 }
-
-export default Card;

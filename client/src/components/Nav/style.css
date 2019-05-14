@@ -1,5 +1,5 @@
-body{
-    margin-bottom: 75px;
+.nav-container{
+    width: 100%;
 }
 
 .navbar-light .navbar-brand {
@@ -7,14 +7,25 @@ body{
 }
 
 .navbar{
-    background-color: #A31F34!important;
+    background-color: #A31F34 !important;
     font-family: 'Lato', sans-serif;
     border-bottom: 1px ridge black;
+    z-index: +1;
+}
+
+.navbar-brand{
+    color: white;
 }
 
 .nav-link{
     padding: 0;
     display: inline;
+    text-align: right;
+    color: white;
+}
+
+#hamburger1{
+    color: white;
 }
 
 #login {
