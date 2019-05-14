@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import { MDBSelect, MDBSelectInput, MDBSelectOptions, MDBSelectOption, MDBBtn, MDBIcon } from "mdbreact";
 import PlacesAutocomplete from "../PlacesAutocomplete"
 import angularIcon from "./images/angular.svg";

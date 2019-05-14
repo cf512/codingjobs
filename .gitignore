@@ -5,5 +5,4 @@ client/node_modules
 package-lock.json
 client/package-lock.json
 config.js
-client/src/config.json
 confs.zip
