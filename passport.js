@@ -1,9 +1,9 @@
 // "use strict";
 
-require("./mongoose")();
+// require("./mongoose")();
 // var TwitterTokenStrategy = require("passport-twitter-token");
-var User = require("mongoose").model("User");
-// const db = require("./models");
+// var User = require("mongoose").model("User");
+const db = require("./models");
 var passport = require("passport");
 var FacebookTokenStrategy = require("passport-facebook-token");
 var GoogleTokenStrategy = require("passport-google-token").Strategy;
@@ -27,7 +27,7 @@ module.exports = function () {
     clientSecret: config.facebookAuth.clientSecret
   },
   function (accessToken, refreshToken, profile, done) {
-    User.upsertFbUser(accessToken, refreshToken, profile, function (err, user) {
+    db.User.upsertFbUser(accessToken, refreshToken, profile, function (err, user) {
       return done(err, user);
     });
   }));
@@ -37,7 +37,7 @@ module.exports = function () {
     clientSecret: config.googleAuth.clientSecret
   },
   function (accessToken, refreshToken, profile, done) {
-    User.upsertGoogleUser(accessToken, refreshToken, profile, function (err, user) {
+    db.User.upsertGoogleUser(accessToken, refreshToken, profile, function (err, user) {
       return done(err, user);
     });
   }));
