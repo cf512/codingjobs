@@ -55,7 +55,7 @@ function Form(props) {
         </div>
         <div className="card card-body">
           <div className="row upper">
-            <div className="col-md-6">
+            <div className="col-md-6 skills">
               <h5>Primary Skill</h5>
               <MDBSelect
                 getValue={props.getValueOfSelectPrimary}
@@ -103,7 +103,7 @@ function Form(props) {
                 </MDBSelectOptions>
               </MDBSelect>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 skills">
               <h5>Additional Skills</h5>
               <MDBSelect
                 getValue={props.getValueOfSelectSecondary}
