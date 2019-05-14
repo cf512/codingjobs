@@ -4,23 +4,31 @@ import Jumbotron from "../components/Jumbotron";
 import {CardList, Card } from "../components/Card";
 import Footer from "../components/Footer";
 import API from "../utils/API";
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 
 class Saved extends Component {
   state = {
-    jobs: []
+    jobs: [],
+    user: cookies.get('user')
   }
 
   componentDidMount() {
-    this.loadJobs();
+    if(this.state.user === undefined) {
+      this.props.history.push("/login");
+    } else {
+      this.loadJobs();
+    }
   }
 
   loadJobs = () => {
-    API.getUser(/*TODO: USER ID*/)
+    API.getUser(this.state.user)
       .then(res => this.setState({ jobs: res.data.savedJobs }))
       .catch(err => console.log(err));
   }
 
   deleteJob = id => {
+    console.log("HERE");
     API.deleteJob(id)
       .then(res => this.loadJobs())
       .catch(err => console.log(err));
@@ -34,7 +42,7 @@ class Saved extends Component {
         />
         <Jumbotron />
         {this.state.jobs.length <= 0 ? (
-          <h5 class="text-center">You do not have any saved jobs</h5>
+          <h5 className="text-center">You do not have any saved jobs</h5>
         ) : (
           <CardList>
             {this.state.jobs.map(job => {
@@ -42,7 +50,7 @@ class Saved extends Component {
                 <Card
                   key={job._id}
                   jobData={job}
-                  deleteOnClick={() => this.deleteJob(job._id)}
+                  deleteOnClick={() => {this.deleteJob(job._id)}}
                 />
               );
             })}

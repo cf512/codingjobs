@@ -6,6 +6,8 @@ import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props
 // import GitHubLogin from 'react-github-login';
 import config from "../../config.json";
 import "./style.css";
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 
 class LoginBtns extends Component {
 
@@ -15,7 +17,8 @@ class LoginBtns extends Component {
     }
 
     logout = () => {
-        this.setState({ isAuthenticated: false, token: '', user: null })
+        this.setState({ isAuthenticated: false, token: '', user: null });
+        cookies.remove('user');
     };
 
     onFailure = (error) => {
@@ -45,6 +48,7 @@ class LoginBtns extends Component {
             r.json().then(user => {
                 if (token) {
                     this.setState({ isAuthenticated: true, user, token })
+
                 }
             });
         })
@@ -64,6 +68,7 @@ class LoginBtns extends Component {
             r.json().then(user => {
                 if (token) {
                     this.setState({ isAuthenticated: true, user, token })
+                    cookies.set('user', user._id, { path: '/' });
                 }
             });
         })
