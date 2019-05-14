@@ -9,6 +9,7 @@
     "mdbreact": "../mdbreact-4.13.0.tgz",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-github-login": "^1.0.3",
     "react-router-dom": "^4.3.1",
     "react-places-autocomplete": "^7.2.1",
     "react-scripts": "^2.1.1"
@@ -24,5 +25,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "dotenv": "^8.0.0"
+  }
 }
