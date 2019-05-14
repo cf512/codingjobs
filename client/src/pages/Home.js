@@ -56,7 +56,7 @@ class Home extends Component {
 
   // Save a job to the database
   saveJob = jobData => {
-    API.saveJob(jobData)
+    API.saveJob(jobData, /*TODO: USER ID*/)
       .catch(err => console.log(err));
   };
 

@@ -21,8 +21,9 @@ router.route("/search")
       .catch(err => res.status(422).json(err));
   });
 
-// Matches with "/api/jobs/:id"
-router.route("/:id")
-  .post(jobsController.create);
+// Matches with "/api/jobs/:userId"
+router.route("/:userId")
+  .post(jobsController.create)
+  .delete(jobsController.delete);
 
 module.exports = router;

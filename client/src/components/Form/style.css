@@ -76,7 +76,6 @@ body{
 #search-box{
     background-color: rgb(160, 160, 160);
     color: black;
-    font-weight: 1000;
 }
 
 #search-box::placeholder {

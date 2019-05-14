@@ -5,6 +5,7 @@ import Results from "./pages/Results";
 import Saved from "./pages/Saved";
 import Resources from "./pages/Resources";
 import ToS from "./pages/ToS";
+import Logout from "./pages/Logout"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/saved" component={Saved} />
           <Route exact path="/resources" component={Resources} />
           <Route exact path="/tos" component={ToS} />
+          <Route exact path="/logout" component={Logout} />
         </Switch>
       </div>
     </Router>
