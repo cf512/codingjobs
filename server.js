@@ -1,7 +1,9 @@
+/* eslint-disable no-console */
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 require("dotenv").config();
+var cors = require("cors");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -14,8 +16,19 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+var index = require("./routes/index");
+
+var corsOption = {
+  origin: true,
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+  exposedHeaders: ["x-auth-token"]
+};
+app.use(cors(corsOption));
+
 // Add routes, both API and view
-app.use(routes);
+// app.use(routes);
+app.use("/api/v1/", index);
 
 // Connect to the Mongo DB
 mongoose.set("useCreateIndex", true);
