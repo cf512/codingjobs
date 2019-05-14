@@ -18,7 +18,7 @@ const Resources = props => {
                   <div className="col-md-6">
                     <h4>HTML</h4>
                     <ul>
-                      <li><a href="https://htmlreference.io/" target="_blank">HTML Reference</a></li>
+                      <li><a href="https://htmlreference.io/" target="_blank" className="link">HTML Reference</a></li>
                       <li><a href="http://htmlshell.com" target="_blank">HTML Shell</a></li>
                       <li><a href="http://html5doctor.com" target="_blank">HTML5 Doctor</a></li>
                     </ul>
