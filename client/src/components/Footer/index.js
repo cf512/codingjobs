@@ -3,9 +3,11 @@ import "./style.css";
 
 function Footer(props) {
   return (
-    <nav className="navbar footer bottom navbar-light bg-light text-center">
-        <span className="navbar-brand mb-0 title">Coding Jobs 2019</span>
-    </nav>
+    <div>
+      <nav className="navbar footer bottom text-center">
+          <span className=" mb-0 title">Coding Jobs 2019</span>
+      </nav>
+    </div>
   );
 }
 
