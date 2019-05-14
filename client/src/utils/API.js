@@ -25,7 +25,6 @@ export default {
   },
   // Saves a job to the given user id
   saveJob: function(jobData, userId) {
-    console.log(jobData);
     return axios.post("/api/jobs/" + userId, jobData);
   },
   // Delete a job by the job id

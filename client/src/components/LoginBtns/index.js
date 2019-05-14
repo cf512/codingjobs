@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardTitle } from "mdbreact";
 import { GoogleLogin } from 'react-google-login';
 // import TwitterLogin from 'react-twitter-auth';
 // import FacebookLogin from 'react-facebook-login';
-import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
+// import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 // import GitHubLogin from 'react-github-login';
 import config from "../../config.json";
 import "./style.css";
+import API from "../../utils/API";
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 
@@ -13,11 +15,20 @@ class LoginBtns extends Component {
 
     constructor() {
         super();
-        this.state = { isAuthenticated: false, user: null, token: '' };
+        this.state = { isAuthenticated: false, user: null, token: '', email: null, userId: cookies.get('user') };
+    }
+
+    componentDidMount() {
+        if(this.state.userId) {
+            this.setState({ isAuthenticated: true });
+            API.getUser(this.state.userId)
+                .then(res => this.setState({ email: res.data.email }))
+                .catch(err => console.log(err));
+        }
     }
 
     logout = () => {
-        this.setState({ isAuthenticated: false, token: '', user: null });
+        this.setState({ isAuthenticated: false, token: '', user: null, email: null, userId: undefined });
         cookies.remove('user');
     };
 
@@ -68,7 +79,7 @@ class LoginBtns extends Component {
             const token = r.headers.get('x-auth-token');
             r.json().then(user => {
                 if (token) {
-                    this.setState({ isAuthenticated: true, user, token })
+                    this.setState({ isAuthenticated: true, user, token, email: user.email, userId: user._id })
                     cookies.set('user', user._id, { path: '/' });
                 }
             });
@@ -97,18 +108,28 @@ class LoginBtns extends Component {
     render() {
         let content = !!this.state.isAuthenticated ?
             (
-                <div className="container">
-                    <p>Authenticated</p>
-                    <div>
-                        {this.state.user.email}
-                    </div>
-                    <br />
-                    <div>
-                        <button onClick={this.logout} className="button">
-                            Log out
-                        </button>
-                    </div>
-                </div>
+                <MDBCard style={{ width: "45rem" }}>
+                    <MDBCardBody>
+                        <MDBCardTitle className="text-center">You are logged in as:</MDBCardTitle>
+                        <MDBCardTitle className="text-center">{this.state.email}</MDBCardTitle>
+                        <div className="text-center">
+                            <MDBBtn href="/" color="primary" className="mr-3">Return Home</MDBBtn>
+                            <MDBBtn onClick={this.logout} color="primary">Log Out</MDBBtn>
+                        </div>
+                    </MDBCardBody>
+                </MDBCard>
+                // <div className="container">
+                //     <p>Authenticated</p>
+                //     <div>
+                //         {this.state.email}
+                //     </div>
+                //     <br />
+                //     <div>
+                //         <MDBBtn color="primary" onClick={this.logout}>
+                //             Log out
+                //         </MDBBtn>
+                //     </div>
+                // </div>
             ) :
             (
                 <div className="container">
@@ -127,7 +148,7 @@ class LoginBtns extends Component {
                                 onFailure={this.googleResponse} />
                         </div>
                         <br />
-                        <div className="row">
+                        {/* <div className="row">
                             <FacebookLogin
                                 appId={config.FACEBOOK_APP_ID}
                                 autoLoad={false}
@@ -135,7 +156,7 @@ class LoginBtns extends Component {
                                 callback={this.facebookResponse}
                                 render={renderProps => (
                                     <button className="btn btn-primary" onClick={renderProps.onClick}><i className="fab fa-facebook-square"></i>  Signup / Login with Facebook</button>)} />
-                        </div>
+                        </div> */}
                         {/* <GitHubLogin
                         clientId={config.GITHUB_CLIENTID}
                         buttonText="Login"

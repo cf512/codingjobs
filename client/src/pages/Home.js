@@ -119,7 +119,7 @@ class Home extends Component {
                 <Card
                   key={job.jobkey}
                   jobData={jobData}
-                  saveOnClick={() => this.saveJob(jobData)}
+                  saveOnClick={this.state.user ? (() => this.saveJob(jobData)) : null}
                 />
               );
             })}
