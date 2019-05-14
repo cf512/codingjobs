@@ -10,7 +10,7 @@ const Resources = props => {
             <MDBJumbotron>
               <h3 className="h3 display-3">Coding Resources!</h3>
               <p className="lead">
-                The links below are to useful coding resources for any questions or to further your skills.
+                The Links Below are to Useful Coding Resources to Help Further Your Skills.
               </p>
               <hr className="my-2" />
               <div className="text-left">

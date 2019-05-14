@@ -4,8 +4,8 @@ import "./style.css";
 function Footer(props) {
   return (
     <div>
-      <nav className="navbar footer bottom navbar-light bg-light text-center">
-          <h5 className="navbar-brand mb-0 title">Coding Jobs 2019</h5>
+      <nav className="navbar footer bottom text-center">
+          <span className=" mb-0 title">Coding Jobs 2019</span>
       </nav>
     </div>
   );

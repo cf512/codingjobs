@@ -33,10 +33,7 @@ render() {
                   <MDBNavLink className="nav-link" to="/login">Login</MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBNavLink className="nav-link" to="/saved">Saved</MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink className="nav-link" to="#!">Profile</MDBNavLink>
+                  <MDBNavLink className="nav-link" to="/saved">Saved Jobs</MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
                   <MDBNavLink className="nav-link" to="/resources">Resources</MDBNavLink>
