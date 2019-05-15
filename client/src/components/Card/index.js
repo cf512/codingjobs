@@ -1,7 +1,7 @@
 import React from "react";
 import { MDBBtn, MDBIcon } from "mdbreact";
 import "./style.css";
-import { PromiseProvider } from "mongoose";
+// import { PromiseProvider } from "mongoose";
 
 export function CardList(props) {
   return (
@@ -30,14 +30,15 @@ export function Card(props) {
             <div className="row">
               <div className="col-md-12 d-flex justify-content-end">
                 {props.saveOnClick ? (
-                  <MDBBtn color="primary" onClick={props.saveOnClick}>
-                    <MDBIcon icon="bookmark" /> Save
+                  <MDBBtn color={props.saveBtnAttr.color} onClick={props.saveOnClick}>
+                    <MDBIcon icon={props.saveBtnAttr.icon} /> {props.saveBtnAttr.text}
                   </MDBBtn>
-                ) : (
-                  <MDBBtn color="danger">
-                    <MDBIcon icon="trash-alt" onClick={props.deleteOnClick} /> Delete
+                ) : null}
+                {props.deleteOnClick ? (
+                  <MDBBtn color="danger" onClick={props.deleteOnClick}>
+                    <MDBIcon icon="trash-alt" /> Delete
                   </MDBBtn>
-                )}
+                ) : null}
                 <MDBBtn href={props.jobData.link} target="_blank" color="primary" >
                   <MDBIcon icon="external-link-alt" /> View on Indeed
                 </MDBBtn>
