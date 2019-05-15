@@ -64,9 +64,11 @@ class Home extends Component {
 
   // Save a job to the database
   saveJob = jobData => {
-    this.setState({ savedJobs: [...this.state.savedJobs, jobData.key] });
-    API.saveJob(jobData, this.state.user)
-      .catch(err => console.log(err));
+    if(!this.state.savedJobs.includes(jobData.key)) {
+      this.setState({ savedJobs: [...this.state.savedJobs, jobData.key] });
+      API.saveJob(jobData, this.state.user)
+        .catch(err => console.log(err));
+    }
   };
 
   // Get the value of the primary skill select
@@ -92,7 +94,7 @@ class Home extends Component {
   }
 
   getSaveBtnAttr = jobKey => {
-    if(this.state.savedJobs.length > 0 && this.state.savedJobs.includes(jobKey)) {
+    if(this.state.savedJobs.includes(jobKey)) {
       return {
         color: "success",
         icon: "check",
