@@ -1,5 +1,4 @@
 import React from "react";
-import { MDBJumbotron, MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBIcon, MDBNavLink, MDBNav, MDBCardImage, MDBCardBody, MDBCardText } from "mdbreact";
 import "./style.css";
 
 function Tos() {

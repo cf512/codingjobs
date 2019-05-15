@@ -1,17 +1,24 @@
-.links-jumbo{
+.resources{
     margin-bottom: 50px;
     padding: 2em 1em;
+    font-family: 'Lato', sans-serif;
 }
 
-.lead{
-    font-size: .9em;
+.jumbotron{
+    background-color: #C2C0BF;
 }
 
-.h3{
+.resources h3{
     font-size: 3.5em;
 }
 
 .text-left h4{
     margin-left: 10px;
 }
+
+.resources a:link{
+    font-size: 1em;
+}
+
+
 
