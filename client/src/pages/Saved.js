@@ -28,7 +28,6 @@ class Saved extends Component {
   }
 
   deleteJob = jobId => {
-    console.log("HERE");
     API.deleteJob(this.state.user, jobId)
       .then(res => this.loadJobs())
       .catch(err => console.log(err));
