@@ -30,8 +30,8 @@ export function Card(props) {
             <div className="row">
               <div className="col-md-12 d-flex justify-content-end">
                 {props.saveOnClick ? (
-                  <MDBBtn color="primary" onClick={props.saveOnClick}>
-                    <MDBIcon icon="bookmark" /> Save
+                  <MDBBtn color={props.saveBtnAttr.color} onClick={props.saveOnClick}>
+                    <MDBIcon icon={props.saveBtnAttr.icon} /> {props.saveBtnAttr.text}
                   </MDBBtn>
                 ) : null}
                 {props.deleteOnClick ? (
