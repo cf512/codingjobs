@@ -200,7 +200,7 @@ function Form(props) {
             </div>
           </div>
           <hr />
-          <MDBBtn type="submit" className="btn-lg btn-primary" color="primary" onClick={props.submit} to="/results">
+          <MDBBtn type="submit" className="btn-primary" color="primary" onClick={props.submit} to="/results">
             <MDBIcon icon="search" /> Go Get It!
           </MDBBtn>
         </div>
