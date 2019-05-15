@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBCollapse, MDBContainer,
-MDBHamburgerToggler } from 'mdbreact';
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBCollapse, MDBHamburgerToggler } from 'mdbreact';
 import "./style.css";
 
 class NavbarPage extends Component {
@@ -22,7 +21,7 @@ toggleSingleCollapse = collapseId => {
 
 render() {
   return (
-      <MDBNavbar className="nav-container">
+      <MDBNavbar className="nav-container navigation">
           <MDBNavbarBrand className="navbar-brand" href="/">
             Coding Jobs
           </MDBNavbarBrand>
@@ -30,13 +29,13 @@ render() {
             <MDBCollapse isOpen={this.state.collapse1} navbar>
               <MDBNavbarNav right>
                 <MDBNavItem active>
-                  <MDBNavLink className="nav-link" to="/login">Login</MDBNavLink>
+                  <MDBNavLink className="nav-link text-right" to="/login">Login</MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBNavLink className="nav-link" to="/saved">Saved Jobs</MDBNavLink>
+                  <MDBNavLink className="nav-link text-right" to="/saved">Saved Jobs</MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBNavLink className="nav-link" to="/resources">Resources</MDBNavLink>
+                  <MDBNavLink className="nav-link text-right" to="/resources">Resources</MDBNavLink>
                 </MDBNavItem>
               </MDBNavbarNav>
             </MDBCollapse>

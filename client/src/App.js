@@ -6,7 +6,8 @@ import Saved from "./pages/Saved";
 import Resources from "./pages/Resources";
 import ToS from "./pages/ToS";
 import Login from "./pages/Login";
-import Logout from "./pages/Logout"
+import Logout from "./pages/Logout";
+import Privacy from "./pages/Privacy";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/terms-of-service" component={ToS} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/logout" component={Logout} />
+          <Route exact path="/privacy" component={Privacy} />
         </Switch>
       </div>
     </Router>

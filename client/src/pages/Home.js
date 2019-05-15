@@ -6,6 +6,8 @@ import Form from "../components/Form";
 import {CardList, Card } from "../components/Card";
 import Pagination from "../components/Pagination";
 import Footer from "../components/Footer";
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 
 class Home extends Component {
   state = {
@@ -16,7 +18,13 @@ class Home extends Component {
     primarySkills: [],
     secondarySkills: [],
     page: 0,
-    totalResults: -1
+    totalResults: -1,
+    user: cookies.get('user'),
+    savedJobs: []
+  }
+
+  componentDidMount() {
+    this.getJobKeys();
   }
 
   // Generic handler for input change
@@ -56,8 +64,11 @@ class Home extends Component {
 
   // Save a job to the database
   saveJob = jobData => {
-    API.saveJob(jobData, /*TODO: USER ID*/)
-      .catch(err => console.log(err));
+    if(!this.state.savedJobs.includes(jobData.key)) {
+      this.setState({ savedJobs: [...this.state.savedJobs, jobData.key] });
+      API.saveJob(jobData, this.state.user)
+        .catch(err => console.log(err));
+    }
   };
 
   // Get the value of the primary skill select
@@ -80,6 +91,30 @@ class Home extends Component {
 
   prevPage = () => {
     this.setState({ page: this.state.page - 1 }, () => this.searchJobs());
+  }
+
+  getSaveBtnAttr = jobKey => {
+    if(this.state.savedJobs.includes(jobKey)) {
+      return {
+        color: "success",
+        icon: "check",
+        text: "Saved"
+      }
+    } else {
+      return {
+        color: "primary",
+        icon: "bookmark",
+        text: "Save"
+      }
+    }
+  }
+
+  getJobKeys = () => {
+    if(this.state.user !== undefined) {
+      API.getUser(this.state.user)
+      .then(res => this.setState({ savedJobs: res.data.savedJobs.map(job => job.key) }))
+      .catch(err => console.log(err));
+    }
   }
 
   render() {
@@ -110,13 +145,15 @@ class Home extends Component {
                 company: job.company,
                 location: job.formattedLocation,
                 description: job.snippet,
-                link: job.url
+                link: job.url,
+                key: job.jobkey
               }
               return (
                 <Card
                   key={job.jobkey}
                   jobData={jobData}
-                  saveOnClick={() => this.saveJob(jobData)}
+                  saveOnClick={this.state.user ? (() => this.saveJob(jobData)) : null}
+                  saveBtnAttr={this.getSaveBtnAttr(job.jobkey)}
                 />
               );
             })}

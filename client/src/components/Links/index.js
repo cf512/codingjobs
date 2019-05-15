@@ -4,12 +4,12 @@ import "./style.css";
 
 const Resources = props => {
   return (
-      <MDBContainer className="mt-5 text-center links-jumbo">
+      <MDBContainer className="mt-5 text-center links-jumbo resources">
         <MDBRow>
           <MDBCol>
             <MDBJumbotron>
               <h3 className="h3 display-3">Coding Resources!</h3>
-              <p className="lead">
+              <p>
                 The Links Below are to Useful Coding Resources to Help Further Your Skills.
               </p>
               <hr className="my-2" />
