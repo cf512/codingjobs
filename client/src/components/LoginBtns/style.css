@@ -3,45 +3,25 @@ body{
 }
 
 .container{
-    max-width: 600px;
-}
-
-.form{
-    font-family: 'Lato', sans-serif;
-    color: black;
-}
-
-.form-control-lg{
-    width: 570px;
+  max-width: 600px;
 }
 
 .btn-lg{
-    display: inline;
+  display: inline;
 }
 
 .button, .btn{
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.dropdown{
-    margin-top: 10px;
-    color: blue;
-}
-
-.card-body{
-    background-color: #8A8B8C;
-    border: none;
-}
-
-.upper{
-    text-align: center;
-    margin-bottom: 20px;
-}
 
 @media only screen and (max-width: 460px) {
-    .form-control-lg {
-      max-width: 400px
+    .card {
+      max-width: 300px
+    }
+    h4 {
+        font-size: 1.2rem;
     }
   }
 
