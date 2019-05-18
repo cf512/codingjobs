@@ -108,12 +108,12 @@ class LoginBtns extends Component {
     render() {
         let content = !!this.state.isAuthenticated ?
             (
-                <MDBCard style={{ width: "45rem" }}>
+                <MDBCard className="loginCard">
                     <MDBCardBody>
                         <MDBCardTitle className="text-center">You are logged in as:</MDBCardTitle>
                         <MDBCardTitle className="text-center">{this.state.email}</MDBCardTitle>
                         <div className="text-center">
-                            <MDBBtn href="/" color="primary" className="mr-3">Return Home</MDBBtn>
+                            <MDBBtn href="/" color="primary">Return Home</MDBBtn>
                             <MDBBtn onClick={this.logout} color="primary">Log Out</MDBBtn>
                         </div>
                     </MDBCardBody>
