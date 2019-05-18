@@ -10,16 +10,20 @@ body{
   display: inline;
 }
 
-.button, .btn{
+.loginBtn{
   margin-left: auto;
   margin-right: auto;
 }
-
 
 @media only screen and (max-width: 460px) {
     .loginCard {
       max-width: 300px
     }
+
+    .loggedinBtns {
+      margin: 0;
+    }
+    
     h4 {
         font-size: 1.2rem;
     }

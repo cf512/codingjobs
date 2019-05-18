@@ -113,7 +113,7 @@ class LoginBtns extends Component {
                         <MDBCardTitle className="text-center">You are logged in as:</MDBCardTitle>
                         <MDBCardTitle className="text-center">{this.state.email}</MDBCardTitle>
                         <div className="text-center">
-                            <MDBBtn href="/" color="primary">Return Home</MDBBtn>
+                            <MDBBtn href="/" color="primary" className="mr-3" className="loggedinBtns">Return Home</MDBBtn>
                             <MDBBtn onClick={this.logout} color="primary">Log Out</MDBBtn>
                         </div>
                     </MDBCardBody>
@@ -141,7 +141,7 @@ class LoginBtns extends Component {
                             <GoogleLogin
                                 clientId={config.GOOGLE_CLIENTID}
                                 render={renderProps => (
-                                    <button className="btn btn-primary" onClick={renderProps.onClick} disabled={renderProps.disabled}><i className="fab fa-google"></i>  Signup / Login with Google    </button>
+                                    <button className="btn btn-primary loginBtn" onClick={renderProps.onClick} disabled={renderProps.disabled}><i className="fab fa-google"></i>  Signup / Login with Google    </button>
                                 )}
                                 buttonText="Login"
                                 onSuccess={this.googleResponse}
