@@ -38,3 +38,7 @@
     text-align: center;
     color: darkgrey;
 }
+
+.navbar-toggler {
+    padding: 0;
+}
