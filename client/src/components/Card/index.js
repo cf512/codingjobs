@@ -1,7 +1,6 @@
 import React from "react";
 import { MDBBtn, MDBIcon } from "mdbreact";
 import "./style.css";
-// import { PromiseProvider } from "mongoose";
 
 export function CardList(props) {
   return (
@@ -39,9 +38,10 @@ export function Card(props) {
                     <MDBIcon icon="trash-alt" /> Delete
                   </MDBBtn>
                 ) : null}
-                <MDBBtn href={props.jobData.link} target="_blank" color="primary" >
+                <MDBBtn href={props.jobData.link} rel="nofollow" target="_blank" color="primary" >
                   <MDBIcon icon="external-link-alt" /> View on Indeed
                 </MDBBtn>
+
               </div>
             </div>
           </div>
