@@ -8,6 +8,11 @@
     z-index: 0;
 }
 
+#resultsCards {
+    background-color: #C2C0BF;
+    max-width: 750px;
+}
+
 .card-body{
     z-index: 1;
 }
