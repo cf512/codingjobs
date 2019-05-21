@@ -113,7 +113,7 @@ class LoginBtns extends Component {
                         <MDBCardTitle className="text-center">You are logged in as:</MDBCardTitle>
                         <MDBCardTitle className="text-center">{this.state.email}</MDBCardTitle>
                         <div className="text-center">
-                            <MDBBtn href="/" color="primary" className="mr-3" className="loggedinBtns">Return Home</MDBBtn>
+                            <MDBBtn href="/" color="primary" className="mr-3" id="loggedinBtns">Return Home</MDBBtn>
                             <MDBBtn onClick={this.logout} color="primary">Log Out</MDBBtn>
                         </div>
                     </MDBCardBody>
