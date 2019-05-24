@@ -3,7 +3,7 @@ import "./style.css";
 
 function PrivacyInfo(props) {
     return (
-        <div class="container">
+        <div className="container">
             <h1>Privacy Policy</h1>
 
 
