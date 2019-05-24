@@ -1,5 +1,5 @@
 body{
-  background-color: #8A8B8C;
+  background-color: #C2C0BF;
 }
 
 .container{
@@ -35,7 +35,7 @@ body{
 }
 
 .card-body{
-  background-color: #8A8B8C;
+  background-color: #C2C0BF;
   border: none;
   z-index: 1;
 }
@@ -74,10 +74,12 @@ body{
   }
 
 #search-box{
-    background-color: rgb(160, 160, 160);
+    background-color: white;
+    text-align: center;
     color: black;
 }
 
 #search-box::placeholder {
-    color: rgb(82, 82, 82);
+    color: #C2C0BF;
+    color: black;
 }

@@ -8,6 +8,7 @@ import ToS from "./pages/ToS";
 import Login from "./pages/Login";
 import Logout from "./pages/Logout";
 import Privacy from "./pages/Privacy";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/logout" component={Logout} />
           <Route exact path="/privacy" component={Privacy} />
+          <Route exact path="/about" component={About} />
         </Switch>
       </div>
     </Router>

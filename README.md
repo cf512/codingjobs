@@ -1,29 +1,32 @@
-# Create React Express App
+# Coding Jobs
 
-## About This Boilerplate
+## Site
+https://codingjobs.herokuapp.com
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+### About Our Project
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+We were inspired to build this site by spending time on the world's leading websites for jobs, which are incredible sites but they can be overwhelming, full of distractions, inundated with advertisements, and containing irrelevant, sponsored job results.
 
-## Starting the app locally
+Coding Jobs was built to provide software engineers with a simple, low noise site strictly for finding software development jobs.
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+### Technologies Used
 
-```
-npm install
-```
+* ReactJS
+* MongoDB (Mongoose)
+* Node & Express
+* MERN Stack
+* Indeed Job Search API
+* Google Places API
+* HTML5
+* CSS3
+* jQuery
+* Javascript
+* Google Identity Platform (Sign Up / Login)
+* PassportJS
+* Heroku
+* Travis CI
 
-This should install node modules within the server and the client folder.
-
-After both installations complete, run the following command in your terminal:
-
-```
-npm start
-```
-
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+### Check Out Our Creators' Other Projects At:
+* [Connor Finnigan](https://github.com/cf512)
+* [Eric Chao](https://github.com/echao2012)
+* [Steve White](https://github.com/BraveOstrich)

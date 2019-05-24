@@ -34,7 +34,6 @@
     color:white;
 }
 
-#search-box {
-    text-align: center;
-    color: darkgrey;
+.navbar-toggler {
+    padding: 0;
 }

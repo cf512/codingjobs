@@ -1,7 +1,6 @@
 import React from "react";
 import { MDBBtn, MDBIcon } from "mdbreact";
 import "./style.css";
-// import { PromiseProvider } from "mongoose";
 
 export function CardList(props) {
   return (
@@ -15,7 +14,7 @@ export function CardList(props) {
 
 export function Card(props) {
   return (
-    <div className="card">
+    <div className="card" id="resultsCards">
       <div className="card-body">
         <div className="row">
           <div className="col-md-4 text-center">
@@ -28,20 +27,21 @@ export function Card(props) {
               <p>{props.jobData.description}</p>
             </div>
             <div className="row">
-              <div className="col-md-12 d-flex justify-content-end">
+              <div className="col-md-12 d-flex justify-content-center">
                 {props.saveOnClick ? (
-                  <MDBBtn color={props.saveBtnAttr.color} onClick={props.saveOnClick}>
+                  <MDBBtn id="resultsBtns" color={props.saveBtnAttr.color} onClick={props.saveOnClick}>
                     <MDBIcon icon={props.saveBtnAttr.icon} /> {props.saveBtnAttr.text}
                   </MDBBtn>
                 ) : null}
                 {props.deleteOnClick ? (
-                  <MDBBtn color="danger" onClick={props.deleteOnClick}>
+                  <MDBBtn id="resultsBtns" color="danger" onClick={props.deleteOnClick}>
                     <MDBIcon icon="trash-alt" /> Delete
                   </MDBBtn>
                 ) : null}
-                <MDBBtn href={props.jobData.link} target="_blank" color="primary" >
+                <MDBBtn id="resultsBtns" href={props.jobData.link} rel="nofollow" target="_blank" color="primary" >
                   <MDBIcon icon="external-link-alt" /> View on Indeed
                 </MDBBtn>
+
               </div>
             </div>
           </div>

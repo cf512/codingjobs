@@ -1,13 +1,114 @@
 .card{
-    max-width: 750px;
+    max-width: 720px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Lato', sans-serif;
     z-index: 0;
+    background-color: #C2C0BF;
+}
+
+#resultsCards {
+    background-color: #C2C0BF;
 }
 
 .card-body{
     z-index: 1;
 }
+
+@media only screen and (max-width: 770px) {
+    .card {
+      max-width: 660px;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    #resultsBtns {
+        padding: 5%;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+  }
+
+  @media only screen and (max-width: 659px) {
+    .card {
+      max-width: 459px;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    #resultsBtns {
+        padding: 5%;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+  }
+
+  @media only screen and (max-width: 460px) {
+    .card {
+      max-width: 380px;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    #resultsBtns {
+        padding: 5%;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .card {
+      max-width: 345px;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    #resultsBtns {
+        padding: 5%;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    .card {
+      max-width: 330px;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    #resultsBtns {
+        padding: 5%;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    .card {
+      max-width: 290px;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    #resultsBtns {
+        padding: 5%;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+  }
