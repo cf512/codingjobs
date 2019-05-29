@@ -5,9 +5,11 @@ https://codingjobs.herokuapp.com
 
 ### About Our Project
 
-We were inspired to build this site by spending time on the world's leading websites for jobs, which are incredible sites but they can be overwhelming, full of distractions, inundated with advertisements, and containing irrelevant, sponsored job results.
+We built CodingJobs for our final project for the Spring 2019 Full Stack Development Coding Bootcamp at The University of Texas at Austin.
 
-Coding Jobs was built to provide software engineers with a simple, low noise site strictly for finding software development jobs.
+We were inspired to create this site as we began our job search and started spending time on the world's leading websites for jobs, which are incredible sites that we have great admiration for, but admittedly these sites can be overwhelming, full of distractions, inundated with advertisements, and sometimes contain too many sponsored and/or low relevance jobs in the search results.
+
+CodingJobs is designed to provide software engineers with a simple, low noise site strictly for finding software development jobs.
 
 ### Technologies Used
 
