@@ -9,6 +9,10 @@
     background-color: #C2C0BF;
 }
 
+.pCard {
+  padding-right: 20px;
+}
+
 #resultsCards {
     background-color: #C2C0BF;
 }
@@ -24,8 +28,13 @@
       padding-right: 5%;
     }
 
+    .pCard {
+      padding-right: 0px;
+    }
+
     #resultsBtns {
-        padding: 5%;
+      padding-left: 7px;
+      padding-right: 7px;
     }
 
     h4 {
@@ -40,8 +49,13 @@
       padding-right: 5%;
     }
 
+    .pCard {
+      padding-right: 0px;
+    }
+
     #resultsBtns {
-        padding: 5%;
+      padding-left: 7px;
+      padding-right: 7px;
     }
 
     h4 {
@@ -56,8 +70,13 @@
       padding-right: 5%;
     }
 
+    .pCard {
+      padding-right: 0px;
+    }
+
     #resultsBtns {
-        padding: 5%;
+      padding-left: 7px;
+      padding-right: 7px;
     }
 
     h4 {
@@ -72,8 +91,13 @@
       padding-right: 5%;
     }
 
+    .pCard {
+      padding-right: 0px;
+    }
+
     #resultsBtns {
-        padding: 5%;
+      padding-left: 7px;
+      padding-right: 7px;
     }
 
     h4 {
@@ -88,8 +112,13 @@
       padding-right: 5%;
     }
 
+    .pCard {
+      padding-right: 0px;
+    }
+
     #resultsBtns {
-        padding: 5%;
+      padding-left: 7px;
+      padding-right: 7px;
     }
 
     h4 {
@@ -104,8 +133,13 @@
       padding-right: 5%;
     }
 
+    .pCard {
+      padding-right: 0px;
+    }
+
     #resultsBtns {
-        padding: 5%;
+      padding-left: 7px;
+      padding-right: 7px;
     }
 
     h4 {
