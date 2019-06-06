@@ -24,7 +24,7 @@ export function Card(props) {
           </div>
           <div className="col-md-8">
             <div className="row">
-              <p>{props.jobData.description}</p>
+              <p className="pCard">{props.jobData.description}</p>
             </div>
             <div className="row">
               <div className="col-md-12 d-flex justify-content-center">
