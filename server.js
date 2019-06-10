@@ -31,7 +31,7 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.set("useCreateIndex", true);
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/codingjobs", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/codingjobs", { useNewUrlParser: true, useFindAndModify: false });
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
