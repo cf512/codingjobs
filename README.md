@@ -33,16 +33,12 @@ CodingJobs is designed to provide software engineers with a simple, low noise si
 * [Eric Chao](https://github.com/echao2012)
 * [Steve White](https://github.com/BraveOstrich)
 
-### Release Notes
+---
 
-> ## 2020-05-25
-> 
-> #### Mongo DB:
-> 
-> - if running macOS Catalina, there are new and differents steps now needed to run MongoDB locally:
+To run locally:
 
 ```shell
-sudo mkdir -p /System/Volumes/Data/data/db
+brew install mongodb-community@6.0
 
-sudo mongod --dbpath /System/Volumes/Data/data/db
+brew services start mongodb-community@6.0
 ```
