@@ -37,16 +37,12 @@
     "mongojs": "^3.1.0",
     "mongoose": "^5.5.8",
     "passport": "^0.4.0",
-    "passport-facebook-token": "^3.3.0",
     "passport-google-token": "^0.1.2",
-    "passport-twitter-token": "^1.3.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-facebook-login": "^4.1.1",
     "react-google-login": "^5.0.4",
     "react-router-dom": "^4.3.1",
     "react-svg": "^9.0.4",
-    "react-twitter-auth": "0.0.13",
     "request": "^2.88.0"
   }
 }
