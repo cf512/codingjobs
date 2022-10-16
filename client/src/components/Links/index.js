@@ -4,7 +4,7 @@ import "./style.css";
 
 const Resources = props => {
   return (
-      <MDBContainer className="mt-1 text-center links-jumbo resources">
+      <MDBContainer className="mt-5 text-center links-jumbo resources">
         <MDBRow>
           <MDBCol>
             <MDBJumbotron>
