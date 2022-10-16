@@ -37,7 +37,7 @@ CodingJobs is designed to provide software engineers with a simple, low noise si
 
 To run locally:
 
-``` shell
+```shell
 brew install mongodb-community@6.0
 
 brew services start mongodb-community@6.0
