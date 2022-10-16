@@ -203,7 +203,7 @@ function Form(props) {
           <MDBBtn type="submit" className="btn-primary" color="primary" onClick={props.submit} to="/results">
             <MDBIcon icon="search" /> Go Get It!
           </MDBBtn>
-          <span id="indeed_at" className="ml-auto"><a href="http://www.indeed.com/" rell="nofollow" >jobs</a> by <a href="http://www.indeed.com/" rell="nofollow" title="Job Search"><img src="http://www.indeed.com/p/jobsearch.gif" style={{border:"0", verticalAlign:"middle"}} alt="Indeed job search" /></a></span>
+          <span id="indeed_at" className="ml-auto">jobs by <a href="http://www.indeed.com/" target="_blank" rel="noopener noreferrer" rell="nofollow" title="Job Search"><img src="https://www.indeed.com/p/jobsearch.gif" alt="Indeed job search" /></a></span>
         </div>
       </form>
     </div>
