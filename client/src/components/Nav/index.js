@@ -20,25 +20,6 @@ class NavbarPage extends Component {
 
   render() {
     return (
-      // <MDBNavbar className="nav-container navigation">
-      //     <MDBNavbarBrand className="navbar-brand" href="/">
-      //       Coding Jobs
-      //     </MDBNavbarBrand>
-      //     <MDBHamburgerToggler id="hamburger1" onClick={()=> this.toggleSingleCollapse('collapse1')} />
-      //       <MDBCollapse isOpen={this.state.collapse1} navbar>
-      //         <MDBNavbarNav right>
-      //           <MDBNavItem active>
-      //             <MDBNavLink className="nav-link text-right" to="/login">Login</MDBNavLink>
-      //           </MDBNavItem>
-      //           <MDBNavItem>
-      //             <MDBNavLink className="nav-link text-right" to="/saved">Saved Jobs</MDBNavLink>
-      //           </MDBNavItem>
-      //           <MDBNavItem>
-      //             <MDBNavLink className="nav-link text-right" to="/resources">Resources</MDBNavLink>
-      //           </MDBNavItem>
-      //         </MDBNavbarNav>
-      //       </MDBCollapse>
-      // </MDBNavbar>
       <MDBNavbar color="info-color" dark expand="md">
               <MDBNavbarBrand className="navbar-brand" href="/">Coding Jobs</MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse("navbarCollapse3")} />
