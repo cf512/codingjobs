@@ -32,7 +32,7 @@
     "dotenv": "^8.0.0",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mdbreact": "./mdbreact-4.13.0.tgz",
     "mongojs": "^3.1.0",
     "mongoose": "^5.5.8",
