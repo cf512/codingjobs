@@ -9,11 +9,14 @@
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
-    "build": "cd client && npm run build",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider npm --prefix client run build",
     "heroku-postbuild": "npm run build"
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "22.x"
+  },
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
