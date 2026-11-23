@@ -36,6 +36,7 @@ class PlacesAutocomplete extends React.Component {
           type={this.props.type}
           className={this.props.className}
           placeholder={this.props.placeholder}
+          disabled={this.props.disabled}
         />
       </div>
     );

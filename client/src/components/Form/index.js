@@ -49,7 +49,8 @@ function Form(props) {
             type="text"
             className="form-control form-control-lg"
             id="search-box"
-            placeholder="Enter city to search"
+            placeholder="Enter city to search (field disabled & project deprecated)"
+            disabled
             onPlaceChanged={props.getValueOfLocation}
           />
         </div>
