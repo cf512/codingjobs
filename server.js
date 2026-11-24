@@ -16,8 +16,6 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// var index = require("./routes/index");
-
 var corsOption = {
   origin: true,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
