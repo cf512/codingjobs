@@ -29,9 +29,20 @@ app.use(cors(corsOption));
 // Add routes, both API and view
 app.use(routes);
 
-// Connect to the Mongo DB
+// Connect to MongoDB, but do not crash the web process when the database is unavailable.
 mongoose.set("useCreateIndex", true);
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/codingjobs", { useNewUrlParser: true, useFindAndModify: false });
+
+const mongoUri = process.env.MONGODB_URI;
+if (mongoUri) {
+  mongoose.connect(mongoUri, {
+    useNewUrlParser: true,
+    useFindAndModify: false
+  }).catch(error => {
+    console.error("MongoDB connection failed:", error.message);
+  });
+} else {
+  console.warn("MONGODB_URI is not configured; database-backed features are unavailable.");
+}
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
