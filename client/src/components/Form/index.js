@@ -49,7 +49,7 @@ function Form(props) {
             type="text"
             className="form-control form-control-lg"
             id="search-box"
-            placeholder="Enter city to search (field disabled & project deprecated)"
+            placeholder={<>Enter city to search <em style={{ color: "#aaa", fontStyle: "italic" }}>(field disabled & project deprecated)</em></>}
             disabled
             onPlaceChanged={props.getValueOfLocation}
           />
@@ -202,7 +202,7 @@ function Form(props) {
           </div>
           <hr />
           <MDBBtn type="submit" className="btn-primary" color="primary" disabled onClick={props.submit} to="/results">
-            <MDBIcon icon="search" /> Go Get It! (button disabled & project deprecated)
+            <MDBIcon icon="search" /> Go Get It! <em style={{ textTransform: "lowercase" }}>(button disabled &amp; project deprecated)</em>
           </MDBBtn>
           <span id="indeed_at" className="ml-auto"><a href="http://www.indeed.com/" rell="nofollow" >jobs</a> by <a href="http://www.indeed.com/" rell="nofollow" title="Job Search"><img src="http://www.indeed.com/p/jobsearch.gif" style={{border:"0", verticalAlign:"middle"}} alt="Indeed job search" /></a></span>
         </div>
