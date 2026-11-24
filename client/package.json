@@ -11,12 +11,13 @@
     "react-dom": "^16.6.3",
     "react-places-autocomplete": "^7.2.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.1",
+    "react-scripts": "5.0.1",
+    "react-toastify": "4.5.2",
     "universal-cookie": "^4.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
+    "build": "DISABLE_ESLINT_PLUGIN=true CI=false react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
@@ -28,5 +29,10 @@
   ],
   "devDependencies": {
     "dotenv": "^8.0.0"
+  },
+  "overrides": {
+    "mdbreact": {
+      "react-toastify": "4.5.2"
+    }
   }
 }
