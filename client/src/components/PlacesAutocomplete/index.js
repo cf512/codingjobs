@@ -35,9 +35,14 @@ class PlacesAutocomplete extends React.Component {
           id={this.props.id}
           type={this.props.type}
           className={this.props.className}
-          placeholder={this.props.placeholder}
+          placeholder=""
           disabled={this.props.disabled}
         />
+        {this.props.placeholder && (
+          <span className="search-box-placeholder">
+            {this.props.placeholder}
+          </span>
+        )}
       </div>
     );
   }
